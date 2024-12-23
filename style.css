@@ -1,0 +1,89 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* Container for the quiz */
+.quiz-container {
+    position: relative; /* Make the container relative */
+    padding: 20px; /* Add padding to the container for spacing */
+}
+
+/* Question and Answer Styling */
+.question {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.question.active {
+    display: block;
+}
+
+.question p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+/* General button styling for consistency */
+button {
+    display: block;
+    width: 300px; /* Fixed width to keep buttons uniform */
+    height: 100px; /* Fixed height to maintain button size */
+    padding: 10px; /* Padding for spacing around text */
+    font-size: 16px;
+    text-align: center;
+    white-space: normal; /* Allows text to wrap inside the button */
+    overflow-wrap: break-word; /* Forces wrapping if needed */
+    background-color: #4CAF50; /* Your desired button color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 10px auto; /* Center the button horizontally */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Style for when the button is hovered over */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Back button style */
+.back-button {
+    width: 200px; /* Smaller width than answer buttons */
+    height: 50px; /* Slightly shorter height */
+    background-color: #888; /* Grey background for distinction */
+    color: #fff;
+    font-size: 14px; /* Slightly smaller font */
+    margin-top: 20px; /* Further down the screen */
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Back button hover effect */
+.back-button:hover {
+    background-color: #666;
+}
+
+/* Final Result Styling */
+#final-result {
+    display: none;
+    text-align: center;
+}
+
+/* #team-result {
+    font-size: 1.5em;
+    color: #2196f3;
+} */

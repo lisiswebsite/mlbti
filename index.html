@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MLB Personality Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .question { display: none; }
+    .active { display: block; }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <div id="q1" class="question active">
+      <p>How do you feel most energized after a long week?</p>
+      <button onclick="nextQuestion('q1', 'q2')">A) Going out to an event or gathering with a lively atmosphere</button>
+      <button onclick="nextQuestion('q1', 'q3')">B) Enjoying a quiet evening at home or spending time with a small group</button>
+    </div>
+
+    <div id="q2" class="question">
+      <p>What do you find more rewarding?</p>
+      <button onclick="nextQuestion('q2', 'q4')">A) Focusing on the details that make something function smoothly</button>
+      <button onclick="nextQuestion('q2', 'q5')">B) Exploring creative ideas and brainstorming for future possibilities</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q3" class="question">
+      <p>What do you find more rewarding?</p>
+      <button onclick="nextQuestion('q3', 'q6')">A) Focusing on the details that make something function smoothly</button>
+      <button onclick="nextQuestion('q3', 'q7')">B) Exploring creative ideas and brainstorming for future possibilities</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q4" class="question">
+      <p>How do you feel about planning a big project or trip?</p>
+      <button onclick="nextQuestion('q4', 'q8')">A) I prefer to map out the steps and stick to a schedule</button>
+      <button onclick="nextQuestion('q4', 'q9')">B) I like to dive in with some flexibility, adapting as things unfold</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q5" class="question">
+      <p>How do you feel about planning a big project or trip?</p>
+      <button onclick="nextQuestion('q5', 'q10')">A) I prefer to map out the steps and stick to a schedule</button>
+      <button onclick="nextQuestion('q5', 'q11')">B) I like to dive in with some flexibility, adapting as things unfold</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q6" class="question">
+      <p>How do you feel about planning a big project or trip?</p>
+      <button onclick="nextQuestion('q6', 'q12')">A) I prefer to map out the steps and stick to a schedule</button>
+      <button onclick="nextQuestion('q6', 'q13')">B) I like to dive in with some flexibility, adapting as things unfold</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q7" class="question">
+      <p>How do you feel about planning a big project or trip?</p>
+      <button onclick="nextQuestion('q7', 'q14')">A) I prefer to map out the steps and stick to a schedule</button>
+      <button onclick="nextQuestion('q7', 'q15')">B) I like to dive in with some flexibility, adapting as things unfold</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q8" class="question">
+      <p>When approaching a disagreement, what is your main focus?</p>
+      <button onclick="nextQuestion('q8', 'q16')">A) Finding the most logical and fair solution for everyone</button>
+      <button onclick="nextQuestion('q8', 'q17')">B) Making sure people feel understood and valued in the process</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q9" class="question">
+      <p>When approaching a disagreement, what is your main focus?</p>
+      <button onclick="nextQuestion('q9', 'q18')">A) Finding the most logical and fair solution for everyone</button>
+      <button onclick="nextQuestion('q9', 'q19')">B) Making sure people feel understood and valued in the process</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q10" class="question">
+      <p>When approaching a disagreement, what is your main focus?</p>
+      <button onclick="nextQuestion('q10', 'q20')">A) Finding the most logical and fair solution for everyone</button>
+      <button onclick="nextQuestion('q10', 'q21')">B) Making sure people feel understood and valued in the process</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q11" class="question">
+      <p>When approaching a disagreement, what is your main focus?</p>
+      <button onclick="nextQuestion('q11', 'q22')">A) Finding the most logical and fair solution for everyone</button>
+      <button onclick="nextQuestion('q11', 'q23')">B) Making sure people feel understood and valued in the process</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q12" class="question">
+      <p>When approaching a disagreement, what is your main focus?</p>
+      <button onclick="nextQuestion('q12', 'q24')">A) Finding the most logical and fair solution for everyone</button>
+      <button onclick="nextQuestion('q12', 'q25')">B) Making sure people feel understood and valued in the process</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q13" class="question">
+      <p>When approaching a disagreement, what is your main focus?</p>
+      <button onclick="nextQuestion('q13', 'q26')">A) Finding the most logical and fair solution for everyone</button>
+      <button onclick="nextQuestion('q13', 'q27')">B) Making sure people feel understood and valued in the process</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q14" class="question">
+      <p>When approaching a disagreement, what is your main focus?</p>
+      <button onclick="nextQuestion('q14', 'q28')">A) Finding the most logical and fair solution for everyone</button>
+      <button onclick="nextQuestion('q14', 'q29')">B) Making sure people feel understood and valued in the process</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q15" class="question">
+      <p>When approaching a disagreement, what is your main focus?</p>
+      <button onclick="nextQuestion('q15', 'team-diamondbacks')">A) Finding the most logical and fair solution for everyone</button>
+      <button onclick="nextQuestion('q15', 'team-mariners')">B) Making sure people feel understood and valued in the process</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <div id="q16" class="question">
+      <p>If you had a day to explore a new city, how would you spend it?</p>
+      <button onclick="nextQuestion('q16', 'team-braves')">A) Checking out some hidden gems and hitting a few nightlife hotspots</button>
+      <button onclick="nextQuestion('q16', 'team-redsox')">B) Finding the most iconic spots and maybe catching a show or game</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <div id="q17" class="question">
+      <p>When you’re online, which of the following is more likely to catch your attention?</p>
+      <button onclick="nextQuestion('q17', 'team-rangers')">A) Current events, celebrity gossip, and TikTok sagas</button>
+      <button onclick="nextQuestion('q17', 'team-cubs')">B) Wikipedia rabbit holes about shocking events and anomalies from history</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <div id="q18" class="question">
+      <p>If you were planning a day out, which of the following would you prefer?</p>
+      <button onclick="nextQuestion('q18', 'team-giants')">A) Check out the latest art exhibits and pop-up events in trendy areas</button>
+      <button onclick="nextQuestion('q18', 'team-guardians')">B) Stroll through historic neighborhoods, appreciating classic architecture and the stories behind each building</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <div id="q19" class="question">
+      <p>What type of location interests you more?</p>
+      <button onclick="nextQuestion('q19', 'team-nationals')">A) A trendy neighborhood with a diverse selection of shops and restaurants</button>
+      <button onclick="nextQuestion('q19', 'team-reds')">B) A historic landmark that has been part of the fabric of the community for generations</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <div id="q20" class="question">
+      <p>If you could plan any celebration, it would be…</p>
+      <button onclick="nextQuestion('q20', 'team-yankees')">A) A grand gala filled with lights, music, and an electric atmosphere</button>
+      <button onclick="nextQuestion('q20', 'team-cardinals')">B) A cozy gathering with close friends, shared stories, and a warm atmosphere</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q21" class="question">
+      <p>When choosing a movie to watch, which do you prefer?</p>
+      <button onclick="nextQuestion('q21', 'team-mets')">A) A new buddy comedy blockbuster</button>
+      <button onclick="nextQuestion('q21', 'team-tigers')">B) A timeless and critically acclaimed classic</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <div id="q22" class="question">
+      <p>When reflecting on your accomplishments, which feeling do you relate to more?</p>
+      <button onclick="nextQuestion('q22', 'team-astros')">A) A nagging sense of imposter syndrome, where you feel like you've achieved success despite thinking you don’t quite deserve it</button>
+      <button onclick="nextQuestion('q22', 'team-angels')">B) A feeling of working hard and putting in the effort, but often feeling underappreciated or overlooked for your contributions</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <div id="q23" class="question">
+      <p>Which personal aesthetic resonates with you the most?</p>
+      <button onclick="nextQuestion('q23', 'team-marlins')">A) A bold, colorful style that makes a statement and showcases your unique personality, always embracing the eye-catching and vibrant</button>
+      <button onclick="nextQuestion('q23', 'team-padres')">B) A more relaxed, casual look that focuses on comfort and simplicity, highlighting a laid-back vibe that appreciates the beauty in everyday life</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="q24" class="question">
+      <p>Which genre of movie do you find more appealing?</p>
+      <button onclick="nextQuestion('q24', 'team-rays')">A) An offbeat underdog story where the main character rises to the occasion to achieve greatness against all expectations</button>
+      <button onclick="nextQuestion('q24', 'team-dodgers')">B) A thrilling heist where the main characters are always one step ahead of everyone else</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <div id="q25" class="question">
+      <p>When it comes to your travel preferences, what kind of destination do you lean towards?</p>
+      <button onclick="nextQuestion('q25', 'team-twins')">A) A cozy, familiar getaway where you can relax and enjoy the comfort of home. You appreciate a sense of community and tradition in your travels</button>
+      <button onclick="nextQuestion('q25', 'team-bluejays')">B) An exciting, vibrant city bursting with energy and a diverse culture. You thrive on exploring new experiences and embracing the spirit of adventure</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <div id="q26" class="question">
+      <p>When faced with a big decision, you are more likely to…</p>
+      <button onclick="nextQuestion('q26', 'team-athletics')">A) Analyze all available data and weigh the pros and cons, crafting a strategic plan to navigate your options</button>
+      <button onclick="nextQuestion('q26', 'team-orioles')">B) Go with your gut feeling, trusting your instincts to guide you through the decision-making process</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <div id="q27" class="question">
+      <p>When it comes to your ideal weekend, you would prefer to…</p>
+      <button onclick="nextQuestion('q27', 'team-whitesox')">A) Head to a bustling urban scene, exploring vibrant nightlife and cultural events with friends</button>
+      <button onclick="nextQuestion('q27', 'team-rockies')">B) Escape to the mountains or a natural retreat, enjoying the fresh air and scenic views in a relaxed environment</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <div id="q28" class="question">
+      <p>When choosing a TV series, which do you prefer?</p>
+      <button onclick="nextQuestion('q28', 'team-phillies')">A) Reality shows filled with juicy drama and villains you love to hate</button>
+      <button onclick="nextQuestion('q28', 'team-brewers')">B) Wholesome, feel-good comfort shows</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <div id="q29" class="question">
+      <p>When choosing a place to live, which are you more drawn to?</p>
+      <button onclick="nextQuestion('q29', 'team-pirates')">A) Striking, innovative architecture that constantly inspires you and sparks your creativity</button>
+      <button onclick="nextQuestion('q29', 'team-royals')">B) A place with a strong sense of community and a welcoming, friendly atmosphere</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <!-- Example of a final result -->
+    <div id="final-result" class="question">
+      <p>Your personality type is <span id="team-result"></span>!</p>
+      <input type="email" id="user-email" placeholder="Enter your email" required>
+      <button id="emailButton">Email My Results</button>
+    </div>
+  </div>
+
+  <!-- Place the updated EmailJS script before the closing </body> tag -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+     (function() {
+        emailjs.init({
+          publicKey: "vX1KWHa4CDQe_DFEW",
+        });
+     })();
+  </script>
+  <script src="quiz.js"></script>
+</body>
+</html>
