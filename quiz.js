@@ -68,21 +68,33 @@ function showFinalResult(teamId) {
 
   answerPath = [];
 
-  // EmailJS integration
-  document.getElementById("emailButton").addEventListener("click", function() {
-    emailjs.send("service_aw271mi", "template_bl4b8g7", {
-      personality_type: teamMappings[teamId].split(",")[0],
-      team_result: teamMappings[teamId],
-      user_email: document.getElementById("user-email").value
-    }).then(function(response) {
-      console.log("SUCCESS!", response.status, response.text);
-      alert("Results emailed successfully!");
-    }, function(error) {
-      console.log("FAILED...", error);
-      alert("Failed to send email. Please try again.");
-    });
-  });
+  // Setup restart button to reload the quiz
+  const restartBtn = document.getElementById("restartButton");
+  if (restartBtn) {
+    restartBtn.onclick = restartQuiz;
+  }
 }
 
-// Initialize EmailJS (make sure you add your actual Public Key)
-emailjs.init("vX1KWHa4CDQe_DFEW");
+function restartQuiz() {
+  // Hide any active question/result
+  const currentActive = document.querySelector(".question.active");
+  if (currentActive) {
+    currentActive.classList.remove("active");
+  }
+
+  // Reset result
+  const finalResultElement = document.getElementById("final-result");
+  finalResultElement.classList.remove("active");
+  finalResultElement.style.display = "none";
+  const teamResult = document.getElementById("team-result");
+  if (teamResult) {
+    teamResult.innerText = "";
+  }
+
+  // Reset answers and show first question
+  answerPath = [];
+  const q1 = document.getElementById("q1");
+  if (q1) {
+    q1.classList.add("active");
+  }
+}

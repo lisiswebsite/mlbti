@@ -217,20 +217,11 @@
     <!-- Example of a final result -->
     <div id="final-result" class="question">
       <p>Your personality type is <span id="team-result"></span>!</p>
-      <input type="email" id="user-email" placeholder="Enter your email" required>
-      <button id="emailButton">Email My Results</button>
+      <button id="restartButton">Restart Quiz</button>
     </div>
   </div>
 
-  <!-- Place the updated EmailJS script before the closing </body> tag -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script type="text/javascript">
-     (function() {
-        emailjs.init({
-          publicKey: "vX1KWHa4CDQe_DFEW",
-        });
-     })();
-  </script>
+
   <script src="quiz.js"></script>
 </body>
 </html>
